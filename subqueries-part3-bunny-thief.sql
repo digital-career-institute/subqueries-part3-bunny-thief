@@ -49,3 +49,9 @@ SELECT * FROM `job_openings`;
 SELECT a.applicant_name, j.job_title FROM applicants as a
 LEFT OUTER JOIN job_openings as j
 ON a.applied_for_job_id = j.job_id;
+
+-- 3. Qualified Applicants
+SELECT a.applicant_name FROM applicants as a
+LEFT OUTER JOIN job_openings as j
+ON a.applied_for_job_id = j.job_id
+WHERE a.experience_years >= j.minimum_experience;
