@@ -41,3 +41,6 @@ values('John Austronaut', 7, 'Masters Aerospace Engineering', 101),
 
 INSERT INTO `applicants` (applicant_name, experience_years, education)
 values ('Steve Nojob', 2, 'Bachelors Business');
+
+-- 1. List of all job openings
+SELECT * FROM `job_openings`;
