@@ -55,3 +55,9 @@ SELECT a.applicant_name FROM applicants as a
 LEFT OUTER JOIN job_openings as j
 ON a.applied_for_job_id = j.job_id
 WHERE a.experience_years >= j.minimum_experience;
+
+-- 4. Job Applicants Without Match
+
+-- 5.Experience Range Search
+SELECT * FROM `job_openings`
+WHERE minimum_experience >= 3 AND minimum_experience <= 5;
