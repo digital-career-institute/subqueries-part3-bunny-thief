@@ -61,3 +61,9 @@ WHERE a.experience_years >= j.minimum_experience;
 -- 5.Experience Range Search
 SELECT * FROM `job_openings`
 WHERE minimum_experience >= 3 AND minimum_experience <= 5;
+
+-- 6. Education Level Analysis
+SELECT j.job_title, COUNT(*), a.education FROM `job_openings` as j
+INNER JOIN applicants as a
+ON j.job_id = a.applied_for_job_id
+GROUP BY a.education;
