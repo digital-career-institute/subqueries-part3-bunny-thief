@@ -44,3 +44,8 @@ values ('Steve Nojob', 2, 'Bachelors Business');
 
 -- 1. List of all job openings
 SELECT * FROM `job_openings`;
+
+-- 2. Applicants and Their Jobs
+SELECT a.applicant_name, j.job_title FROM applicants as a
+LEFT OUTER JOIN job_openings as j
+ON a.applied_for_job_id = j.job_id;
